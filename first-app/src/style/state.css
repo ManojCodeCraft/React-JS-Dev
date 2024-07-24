@@ -1,0 +1,19 @@
+.state{
+    display: flex;
+    justify-content: center;
+    height: 90vh;
+    width: 100vw;
+
+    flex-direction: column;
+    align-items: center;
+}
+.main-state{
+    display: flex;
+    padding: 10px;
+    /* justify-content: center; */
+
+}
+.main-state button{
+    margin: 10px;
+    height: 20px   ;
+}

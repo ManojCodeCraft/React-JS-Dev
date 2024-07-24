@@ -1,0 +1,22 @@
+.register{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+  flex-direction: column;
+  /* grid-template-columns: auto auto auto; */
+}
+.register label{
+    margin: 10px;
+}
+.register button{
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: chartreuse;
+    cursor: pointer;
+}
+.register input{
+    padding: 10px 20px;
+    border: 2px solid rgb(108, 171, 247);
+    outline: none;
+    border-radius: 3px;
+}
