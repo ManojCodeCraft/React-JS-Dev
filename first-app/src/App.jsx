@@ -2,17 +2,12 @@
 // import './App.css';
 
 import { useEffect, useState } from "react";
-import Navbar from "./componets/Navbar";
-import Services from "./componets/Services";
-import AboutUs from "./componets/AboutUs";
-import "./style/app.css"
-import Contact from "./componets/Contact";
-import Home from "./componets/Home"
-import StateManage from "./componets/StateManage";
-import Register from "./componets/Register";
+
+import Hooks from "./pages/Hooks";
+import Footer from "./common/Footer";
 function App() {
   const [color,setColor]=useState("white")
- 
+   const [count,setCount]=useState(0);
   const changeBackground = (value) => {
     setColor(value);
   };
@@ -23,9 +18,14 @@ const person ={
   age:25,
   college:"OIST Indore M.P"
 }
+
+
   return (
     <div style={{backgroundColor:color}} >
-      <Register/>
+{/* <Students/> */}
+<Hooks/>
+{/* <ConditionalRendering/> */}
+      {/* <Register/> */}
       {/* <StateManage/> */}
        {/* <div className="navbar">
         <button  onClick={()=>changeBackground("blue")}  className="navbar-btn">
@@ -52,6 +52,8 @@ const person ={
       {/* <Services name="Web Development" />
       <AboutUs />
       <Contact /> */}
+
+      <Footer/>
     </div>
   );
 }
