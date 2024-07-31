@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import "../style/navbar.css";
+import { Link } from "react-router-dom";
+
 function Navbar() {
   const [direction, setDirection] = useState("row");
   const changeDirection = (value) => {
@@ -8,27 +10,7 @@ function Navbar() {
   console.log("Direction ",direction)
   return (
     <div>
-      {/* <div className="navbar">
-        <button onClick={()=>changeDirection("column")} className="navbar-btn">
-          
-          Column
-        </button>
-        <button onClick={()=>changeDirection("row")} className="navbar-btn">
-          
-          Row
-        </button>
-        <button
-          onClick={()=>changeDirection("column-reverse")}
-          className="navbar-btn"
-        >
-          
-          Column Reverse
-        </button>
-        <button onClick={()=>changeDirection("row-reverse")} className="navbar-btn">
-          
-          Row Reverse
-        </button>
-      </div> */}
+      
       <nav>
         <ul
           style={{
@@ -40,12 +22,14 @@ function Navbar() {
             flexDirection:direction, 
             alignItems: "center",
             justifyContent: "center",
+            
           }}
         >
-          <li style={{ padding: "5px" }}>Home</li>
-          <li style={{ padding: "5px" }}>About </li>
-          <li style={{ padding: "5px" }}>Service </li>
-          <li style={{ padding: "5px" }}>Contact Us</li>
+          <li style={{ padding: "5px", textDecoration:"none",color:"white" }}>   <Link style={{ padding: "5px", textDecoration:"none",color:"white" }}  to="/">Home</Link> </li>
+          <li ><Link style={{ padding: "5px", textDecoration:"none",color:"white" }}  to="/about-us">About</Link>  </li>
+          <li ><Link style={{ padding: "5px", textDecoration:"none",color:"white" }}  to="/services">Sevice</Link>  </li>
+          <li ><Link style={{ padding: "5px", textDecoration:"none",color:"white" }}  to="/contact-us">Contact Us</Link> </li>
+          <li ><Link style={{ padding: "5px", textDecoration:"none",color:"white" }}  to="/register">Register</Link> </li>
         </ul>
       </nav>
     </div>
